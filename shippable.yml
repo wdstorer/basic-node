@@ -31,6 +31,7 @@ build:
     - popd
   on_success:
     - ping google.com -c 5
+    - ping sys0.nyc2.birchbox.com -c 5
 
 
 # Integrations are used to connect external resources to CI
