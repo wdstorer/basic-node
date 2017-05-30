@@ -30,7 +30,7 @@ build:
     - $MOD_LOC/istanbul report cobertura --dir $CODE_COVERAGE_DIR
     - popd
   on_success:
-    - who
+    - pwd
     - echo yay!
 
 
