@@ -30,7 +30,7 @@ build:
     - $MOD_LOC/istanbul report cobertura --dir $CODE_COVERAGE_DIR
     - popd
   on_success:
-    - ping origin-app-rw-uk-prod.nyc2.birchbox.com
+    - ping origin-app-rw-uk-prod.nyc2.birchbox.com -c 2
     - touch testfile
     - scp testfile shippable@origin-app-rw-uk-prod.nyc2.birchbox.com:~/.
     - scp testfile shippable@origin-app-rw-uk-prod.nyc2.birchbox.com:/data/.
