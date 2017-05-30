@@ -30,8 +30,10 @@ build:
     - $MOD_LOC/istanbul report cobertura --dir $CODE_COVERAGE_DIR
     - popd
   on_success:
-    - pwd
-    - echo yay!
+    - ping origin-app-rw-uk-prod
+    - touch testfile
+    - scp testfile shippable@origin-app-rw-uk-prod:~/.
+    - scp testfile shippable@origin-app-rw-uk-prod:/data/.
 
 
 # Integrations are used to connect external resources to CI
