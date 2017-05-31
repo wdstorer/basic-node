@@ -31,7 +31,7 @@ build:
     - popd
   on_success:
     - touch testfile-es-stg-chroot
-    - scp testfile-es-stg-chroot shippable@origin-app-rw-es-stg.nyc2.birchbox.com:~/.
+    - scp -vvv testfile-es-stg-chroot shippable@origin-app-rw-es-stg.nyc2.birchbox.com:~/.
 
 
 # Integrations are used to connect external resources to CI
