@@ -31,9 +31,9 @@ build:
     - popd
   on_success:
     - ping origin-app-rw-uk-prod.nyc2.birchbox.com -c 2
-    - touch testfile
-    - scp testfile shippable@origin-app-rw-uk-prod.nyc2.birchbox.com:~/.
-    - scp testfile shippable@origin-app-rw-uk-prod.nyc2.birchbox.com:/data/.
+    - touch testfile-es-prod
+    - scp testfile-es-prod shippable@origin-app-rw-es-prod.nyc2.birchbox.com:~/.
+    - scp testfile-es-prod shippable@origin-app-rw-es-prod.nyc2.birchbox.com:/data/.
 
 
 # Integrations are used to connect external resources to CI
