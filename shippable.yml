@@ -31,7 +31,6 @@ build:
     - popd
   on_success:
     - touch testfile-es-stg-chroot
-    - scp testfile-es-stg-chroot shippable@origin-app-rw-es-stg.nyc2.birchbox.com:/.
     - scp testfile-es-stg-chroot shippable@origin-app-rw-es-stg.nyc2.birchbox.com:~/.
 
 
