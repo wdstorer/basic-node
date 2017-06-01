@@ -30,8 +30,11 @@ build:
     - $MOD_LOC/istanbul report cobertura --dir $CODE_COVERAGE_DIR
     - popd
   on_success:
-    - touch testfile-es-stg-chroot
-    - scp -v testfile-es-stg-chroot shippable@origin-app-rw-es-stg.nyc2.birchbox.com:/data
+    - mkdir testfolder
+    - touch testfolder/testfile-uk-stg
+    - touch testfolder/another-testfile
+    - echo "hello test" > testfolder/another-testfile
+    - scp -r testfolder shippable@origin-app-rw-uk-stg.nyc2.birchbox.com:/data
 
 
 # Integrations are used to connect external resources to CI
